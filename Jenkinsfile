@@ -18,7 +18,7 @@ pipeline {
         stage('Stage') {
             steps {
                 sh "bash ./stage_deploy.sh"
-                timeout(time: 60, unit: 'SECONDS') {
+                timeout(time: 30, unit: 'SECONDS') {
                   input 'Deploy to Production?'
                 }
                 sh "bash ./stage_cleanup.sh"
