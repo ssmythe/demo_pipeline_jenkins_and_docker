@@ -5,12 +5,14 @@ pipeline {
         }
     }
     stages {
+/*--
         stage('Sync') {
             steps {
                 git 'https://github.com/ssmythe/demo_pipeline_jenkins_and_docker.git'
             }
         }
-        stage('Build') {
+--*/
+    stage('Build') {
             steps {
                 sh "bash ./build.sh"
             }
